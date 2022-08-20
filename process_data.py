@@ -11,7 +11,7 @@ DATA_OUT = os.path.abspath('data_out')
 
 ELECTION_ID_TO_NAME = {
     '27966': '2022-federal-election',
-    # '24310': '2019-federal-election',
+    '24310': '2019-federal-election',
     # '20499': '2016 Federal Election',
 }
 
@@ -24,8 +24,8 @@ def read_csv_file(csv_path, remove_first_line=True):
         print(f"File {csv_path} does not exist!")
         sys.exit(1)
 
-    with open(csv_path, newline=NEWLINE) as csv_file:
-        all_lines = list(csv_file)
+    with open(csv_path, newline='\n') as csv_file:
+        all_lines = [line.replace('\r', '') for line in csv_file]
         if remove_first_line:
             all_lines.pop(0)
 
@@ -44,11 +44,13 @@ def read_senate_candidate_id_list(election_id):
     candidate_download_path = os.path.join(DATA_DIR, f'SenateCandidatesDownload-{election_id}.csv')
     csv_data = read_csv_file(candidate_download_path)
 
-    colour_csv = read_csv_file(os.path.join('data_in', 'party color codes.csv'))
+    colour_csv = read_csv_file(os.path.join(DATA_DIR, 'party color codes.csv'))
     colour_data = {
         row['party_code']: row['colour']
         for row in colour_csv
     }
+
+    print(colour_csv)
 
     candidate_name_to_data = {}
 
@@ -133,23 +135,43 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
 
         this_count_data = {
             'count': count,
-            'progressive_vote_total': {
-                name: int(rows_by_count[count][name]['ProgressiveVoteTotal'])
+            'progressive_vote_total': [
+                int(rows_by_count[count][name]['ProgressiveVoteTotal'])
                 for name in all_normalised_names
-            }
+            ]
         }
         all_count_data.append(this_count_data)
 
     return {
         'counts': all_count_data,
         'state': first_row['State'],
-        'num_vacancies': first_row['No Of Vacancies'],
-        'total_formal': first_row['Total Formal Papers'],
-        'quota': first_row['Quota'],
+        'num_vacancies': int(first_row['No Of Vacancies']),
+        'total_formal': int(first_row['Total Formal Papers']),
+        'quota': int(first_row['Quota']),
+        'names': all_normalised_names,
         'candidate_info': {
             candidate_name: candidate_data
             for candidate_name, candidate_data in candidate_info.items()
             if candidate_data['state'] == state
+        } | {
+            '__Exhausted': {
+                'party_abbreviation': 'META',
+                'party_name': 'Internal',
+                'candidate_id': -1,
+                'state': state,
+                'given_name': "I'm",
+                'surname': "exhausted",
+                'colour_data': '#DDDDDD'
+            },
+            '__Gain/Loss': {
+                'party_abbreviation': 'META',
+                'party_name': 'Internal',
+                'candidate_id': -2,
+                'state': state,
+                'given_name': "Gain",
+                'surname': "Loss",
+                'colour_data': '#DDDDDD'
+            },
         }
     }
 

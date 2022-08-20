@@ -3,81 +3,34 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Senate Grapher</title>
-	<style> * {font-family:sans-serif;} </style>
+	<style>
+		* {font-family:sans-serif;}
+		#scale-choice-wrapper {
+			padding: 5px;
+			border-radius: 20px;
+			border: 1px solid black;
+		}
+	</style>
 </head>
 <body>
 	<h1>Senate Grapher Demo</h1>
-	<p>This quick demo contains a single exclusion at a late stage of the 2019 ACT Senate count, just to demonstrate what the program could look like.</p>
+	<p>This demo contains the 2022 ACT Senate count. The ability to select other elections will be coming... soon!</p>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<button type="button" id="advance">Next Count</button>
 	<button type="button" id="backwards">Previous Count</button>
+	<button type="button" id="advance">Next Count</button>
+
+	<span id="scale-choice-wrapper">
+		<label>
+			Linear <input type="radio" id="scale-linear" name="scale-choice" value="linear" checked>
+		</label>
+		<label style="margin-left: 20px">
+			Logarithmic <input type="radio" id="scale-logarithmic" name="scale-choice" value="logarithmic">
+		</label>
+	</span>
+
 	<div>
-		<canvas id="voteChart"></canvas>
+		<canvas id="vote-chart"></canvas>
 	</div>
-	<script>
-		const labels = [
-			"SESELJA, Zed",
-			"GUNNING, Robert",
-			"KYBURZ, Penny",
-			"PESEC, Anthony",
-			"VAN DUREN, Shane",
-			"WALTER, Peter",
-			"HAYDON, John",
-			"GALLAGHER, Katy",
-			"WAITES, Nancy",
-		];
-		
-		const data = {
-			labels: labels,
-			datasets: [{
-				label: "Votes",
-				data: [85399, 3096, 48383, 13426, 2598, 6265, 4098, 90078, 16054],
-				backgroundColor: ["#080CAB", "#080CAB", "#10C25B", "#888888", "#4169E1", "#FFED00", "#047E49", "#F00011", "#F00011"]
-			},
-			{
-				data: [90078, 90078, 90078, 90078, 90078, 90078, 90078, 90078, 90078],
-				type: "line",
-				borderDash: [8, 8],
-				pointRadius: 0,
-				pointHitRadius: 0
-			}]
-		};
-		
-		const config = {
-			type: "bar",
-			data: data,
-			options: {
-				plugins: {
-					legend: {
-						display: false
-					},
-					title: {
-						display: true,
-						text: "Counts 17-18"
-					}
-				}
-			}
-		};
-		
-		function advance() {
-			voteChart.data.datasets[0].data = [86065, 3126, 48466, 13545, 0, 7415, 5282, 90078, 16196];
-			voteChart.config.options.plugins.title.text = "Counts 19-20"
-			voteChart.update();
-		};
-		function backwards() {
-			voteChart.data.datasets[0].data = [85399, 3096, 48383, 13426, 2598, 6265, 4098, 90078, 16054];
-			voteChart.config.options.plugins.title.text = "Counts 17-18"
-			voteChart.update();
-		};
-		
-		document.getElementById("advance").addEventListener("click", advance);
-		document.getElementById("backwards").addEventListener("click", backwards);
-	</script>
-	<script>
-		const voteChart = new Chart(
-			document.getElementById("voteChart"),
-			config
-		);
-	</script>
+	<script src="senate_graph.js"></script>
 </body>
 </html>
