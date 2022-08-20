@@ -9,10 +9,13 @@ import json
 DATA_DIR = os.path.abspath('data_in')
 DATA_OUT = os.path.abspath('data_out')
 
+WA_2014_SPECIAL_ELECTION = '2014-special-election'
+
 ELECTION_ID_TO_NAME = {
     '27966': '2022-federal-election',
     '24310': '2019-federal-election',
     '20499': '2016-federal-election',
+    '17875': WA_2014_SPECIAL_ELECTION,
     '17496': '2013-federal-election',
     '15508': '2010-federal-election',
     '13745': '2007-federal-election',
@@ -212,6 +215,9 @@ def process_election(election_id: str) -> None:
     print(f'For {election_name}, found {len(candidate_info)} candidates.')
 
     for state in STATES:
+        if election_name == WA_2014_SPECIAL_ELECTION and state != 'WA':
+            continue
+
         dop_data = read_senate_race(election_id, state)
         compiled_info = compile_dop_data(election_id, state, dop_data, candidate_info)
         json_filename = os.path.join(DATA_OUT, f'{election_name}-{state}.json')
@@ -235,7 +241,7 @@ def main() -> None:
 
 def clear_data_out():
     for filename in os.listdir(DATA_OUT):
-        if filename.endswith('.json'):
+        if filename.endswith('.json') or filename.endswith('js'):
             os.remove(os.path.join(DATA_OUT, filename))
 
 if __name__ == '__main__':

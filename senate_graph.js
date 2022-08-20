@@ -175,15 +175,26 @@ document.body.addEventListener("keydown", e => {
 function get_race_list() {
     // TODO: move this data into a JSON in data_out
     const ALL_STATES = ['ACT', 'NSW', 'NT', 'QLD', 'SA', 'TAS', 'VIC', 'WA'].sort();
-    const ELECTION_YEARS = [2022, 2019, 2016, 2013, 2010, 2007, 2004];
+    const ELECTION_YEARS = [2022, 2019, 2016, '2014-special', 2013, 2010, 2007, 2004];
     const all_races = [];
 
     ELECTION_YEARS.forEach(election_year => {
+        if (election_year == '2014-special') {
+            all_races.push({
+                id: `2014-special-election-WA`,
+                state: 'WA',
+                year: 2014,
+                display_name: '2014 WA (special)'
+            });
+            return;
+        }
+
         ALL_STATES.forEach(state => {
             all_races.push({
                 id: `${election_year}-federal-election-${state}`,
                 state: state,
-                year: election_year
+                year: election_year,
+                display_name: `${election_year} ${state}`
             });
         });
     });
@@ -194,7 +205,7 @@ function get_race_list() {
 const race_choose_el = document.getElementById('race-chooser');
 get_race_list().forEach(race => {
     const option = document.createElement('option');
-    option.innerText = `${race.year} ${race.state}`;
+    option.innerText = race.display_name;
     option.dataset['race'] = race.id;
     race_choose_el.appendChild(option);
 });
