@@ -72,6 +72,8 @@ function load_race_from_data(data) {
         ]
     };
 
+    const font_size = data.names.length > 50 ? 12 : 14;
+
     state.config = {
         type: "bar",
         data: state.data,
@@ -98,6 +100,18 @@ function load_race_from_data(data) {
                 y: {
                     min: get_scale_min(),
                     type: get_scale_from_dropdown()
+                },
+                x: {
+                    ticks: {
+                        font: {
+                            size: font_size
+                        },
+                        padding: 1,
+                        major: {
+                            enabled: true
+                        },
+                        autoSkip: false
+                    }
                 }
             }
         }

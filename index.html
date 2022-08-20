@@ -1,36 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="UTF-8">
-	<title>Senate Grapher</title>
-	<style>
-		* {font-family:sans-serif;}
-		#scale-choice-wrapper {
-			padding: 5px;
-			border-radius: 20px;
-			border: 1px solid black;
-		}
-	</style>
+    <meta charset="UTF-8">
+    <title>Senate Grapher</title>
+    <style>
+        * {
+            font-family:sans-serif;
+        }
+
+        #scale-choice-wrapper {
+            padding: 5px;
+            border-radius: 20px;
+            border: 1px solid black;
+        }
+
+        #chart-container {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
 </head>
 <body>
-	<h1>Senate Grapher Demo</h1>
-	<p>This demo shows the 2022 ACT Senate count. The ability to select other elections will be coming soon.</p>
-	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-	<button type="button" id="backwards">Previous Count</button>
-	<button type="button" id="advance">Next Count</button>
+    <h1>Senate Grapher Demo</h1>
+    <p>This demo shows the 2022 ACT Senate count. The ability to select other elections will be coming soon.</p>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <button type="button" id="backwards">Previous Count</button>
+    <button type="button" id="advance">Next Count</button>
 
-	<span id="scale-choice-wrapper">
-		<label>
-			Linear <input type="radio" id="scale-linear" name="scale-choice" value="linear" checked>
-		</label>
-		<label style="margin-left: 20px">
-			Logarithmic <input type="radio" id="scale-logarithmic" name="scale-choice" value="logarithmic">
-		</label>
-	</span>
+    <span id="scale-choice-wrapper">
+        <label>
+            Linear <input type="radio" id="scale-linear" name="scale-choice" value="linear" checked>
+        </label>
+        <label style="margin-left: 20px">
+            Logarithmic <input type="radio" id="scale-logarithmic" name="scale-choice" value="logarithmic">
+        </label>
+    </span>
 
-	<div>
-		<canvas id="vote-chart"></canvas>
-	</div>
-	<script src="senate_graph.js"></script>
+    <div id="chart-container">
+        <canvas id="vote-chart"></canvas>
+    </div>
+    <script src="senate_graph.js"></script>
 </body>
 </html>

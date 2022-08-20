@@ -121,7 +121,7 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
 
     final_count_num = max(rows_by_count.keys())
 
-    print(f'For {election_name} in {state} there were {final_count_num} counts')
+    print(f'For {election_name} in {state} there were {final_count_num} counts and {len(all_normalised_names)} candidates')
 
     previous_action = {
         # 'description': 'First preferences',
