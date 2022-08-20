@@ -64,8 +64,10 @@ def read_senate_candidate_id_list(election_id):
             party_abbreviation = 'IND'
 
         display_name = f"{candidate_dict['GivenNm']} {candidate_dict['Surname']}"
+        tooltip_name = display_name
+
         if candidate_dict['PartyNm']:
-            display_name += f" ({candidate_dict['PartyNm']})"
+            tooltip_name += f" ({candidate_dict['PartyNm']})"
 
         candidate_name_to_data[full_name] = {
             'party_abbreviation': party_abbreviation,
@@ -75,6 +77,7 @@ def read_senate_candidate_id_list(election_id):
             'given_name': candidate_dict['GivenNm'],
             'surname': candidate_dict['Surname'],
             'display_name': display_name,
+            'tooltip_name': tooltip_name,
             'colour_data': '#' + colour_data[party_abbreviation]
         }
 

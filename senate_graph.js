@@ -82,6 +82,15 @@ function load_race_from_data(data) {
                     display: true,
                     text: ""
                 },
+                tooltip: {
+                    callbacks: {
+                        title: tooltips => tooltips.map(tooltip => {
+                            const name = data.names[tooltip.dataIndex];
+                            console.log(data.candidate_info[name].tooltip_name);
+                            return data.candidate_info[name].tooltip_name || data.candidate_info[name].display_name;
+                        })
+                    }
+                }
             },
             scales: {
                 y: {
@@ -149,4 +158,4 @@ window.addEventListener("keydown", e => {
     }
 });
 
-load_race('2022-federal-election', 'ACT');
+load_race('2022-federal-election', 'TAS');
