@@ -40,12 +40,13 @@ function get_scale_min() {
 }
 
 function load_race_from_data(data) {
-    console.log(data);
-
     if (state.chart) {
         state.chart.destroy();
     }
 
+    if (location.href.indexOf('git') == -1) {
+        console.log(data);
+    }
 
     state.current_data = data;
     state.current_count = 0;
@@ -90,7 +91,6 @@ function load_race_from_data(data) {
                     callbacks: {
                         title: tooltips => tooltips.map(tooltip => {
                             const name = data.names[tooltip.dataIndex];
-                            console.log(data.candidate_info[name].tooltip_name);
                             return data.candidate_info[name].tooltip_name || data.candidate_info[name].display_name;
                         })
                     }
@@ -158,7 +158,6 @@ document.getElementById("backwards").addEventListener("click", backwards);
 
 ['scale-linear', 'scale-logarithmic'].forEach(id_name => {
     document.getElementById(id_name).addEventListener('change', e => {
-        console.log(e);
         state.config.options.scales.y.type = get_scale_from_dropdown();
         state.config.options.scales.y.min = get_scale_min();
         load_data_for_count();
