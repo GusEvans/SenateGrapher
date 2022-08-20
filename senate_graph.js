@@ -72,7 +72,7 @@ function load_race_from_data(data) {
         ]
     };
 
-    const font_size = data.names.length > 50 ? 12 : 14;
+    const font_size = data.names.length > 50 ? 10 : 14;
 
     state.config = {
         type: "bar",
@@ -128,28 +128,27 @@ function load_race_from_data(data) {
 }
 
 function got_js_payload_data(data) {
-    let key = `${data.election_name}-${data.state}`;
-    js_loaded_data[key] = data;
-    load_race_from_js(data.election_name, data.state);
+    let race_id = `${data.election_name}-${data.state}`;
+    js_loaded_data[race_id] = data;
+    load_race_from_js(race_id);
 }
 
-function load_race_from_js(election_name, state) {
-    let key = `${election_name}-${state}`;
-    if (js_loaded_data[key]) {
-        load_race_from_data(js_loaded_data[key]);
+function load_race_from_js(race_id) {
+    if (js_loaded_data[race_id]) {
+        load_race_from_data(js_loaded_data[race_id]);
     } else {
         const loader = document.createElement('script');
-        loader.src = `./data_out/${key}.js`;
+        loader.src = `./data_out/${race_id}.js`;
         document.body.appendChild(loader);
     }
 }
 
-function load_race(election_name, state) {
-    fetch(`./data_out/${election_name}-${state}.json`)
+function load_race(race_id) {
+    fetch(`./data_out/${race_id}.json`)
         .then(response => response.json())
         .then(load_race_from_data)
         .catch(
-            err => load_race_from_js(election_name, state)
+            err => load_race_from_js(race_id)
         );
 }
 
@@ -166,7 +165,7 @@ document.getElementById("backwards").addEventListener("click", backwards);
     });
 });
 
-window.addEventListener("keydown", e => {
+document.body.addEventListener("keydown", e => {
     if (e.key === 'ArrowRight') {
         advance();
     } else if (e.key === 'ArrowLeft') {
@@ -174,4 +173,38 @@ window.addEventListener("keydown", e => {
     }
 });
 
-load_race('2022-federal-election', 'TAS');
+function get_race_list() {
+    // TODO: move this data into a JSON in data_out
+    const ALL_STATES = ['ACT', 'NSW', 'NT', 'QLD', 'SA', 'TAS', 'VIC', 'WA'].sort();
+    const ELECTION_YEARS = [2022, 2019, 2016];
+    const all_races = [];
+
+    ELECTION_YEARS.forEach(election_year => {
+        ALL_STATES.forEach(state => {
+            all_races.push({
+                id: `${election_year}-federal-election-${state}`,
+                state: state,
+                year: election_year
+            });
+        });
+    });
+
+    return all_races;
+}
+
+const race_choose_el = document.getElementById('race-chooser');
+get_race_list().forEach(race => {
+    const option = document.createElement('option');
+    option.innerText = `${race.year} ${race.state}`;
+    option.dataset['race'] = race.id;
+    race_choose_el.appendChild(option);
+});
+
+race_choose_el.addEventListener('input', e => {
+    const option = race_choose_el.selectedOptions[0];
+    if (!option) return;
+
+    load_race(option.dataset['race']);
+});
+
+load_race(get_race_list()[0].id);
