@@ -12,7 +12,7 @@ DATA_OUT = os.path.abspath('data_out')
 ELECTION_ID_TO_NAME = {
     '27966': '2022-federal-election',
     '24310': '2019-federal-election',
-    # '20499': '2016 Federal Election',
+    '20499': '2016-federal-election',
 }
 
 STATES = ['ACT', 'NSW', 'NT', 'QLD', 'SA', 'TAS', 'VIC', 'WA']
@@ -33,11 +33,11 @@ def read_csv_file(csv_path, remove_first_line=True):
         return list(csv_reader)
 
 
-def normalise_name(given_name, surname):
+def normalise_name(given_name, surname, state):
     if surname in ('Exhausted', 'Gain/Loss') and given_name == '':
-        return '__' + surname
+        return f'__{state}_{surname}'
 
-    return f'{surname}, {given_name}'
+    return f'{surname}, {given_name} ({state})'
 
 
 def read_senate_candidate_id_list(election_id):
@@ -50,17 +50,22 @@ def read_senate_candidate_id_list(election_id):
         for row in colour_csv
     }
 
-    print(colour_csv)
-
     candidate_name_to_data = {}
 
     for candidate_dict in csv_data:
-        full_name = normalise_name(candidate_dict['GivenNm'], candidate_dict['Surname'])
+        full_name = normalise_name(
+            candidate_dict['GivenNm'], candidate_dict['Surname'],
+            candidate_dict['StateAb']
+        )
         assert full_name not in candidate_name_to_data
 
         party_abbreviation = candidate_dict['PartyAb']
         if party_abbreviation == '':
             party_abbreviation = 'IND'
+
+        display_name = f"{candidate_dict['GivenNm']} {candidate_dict['Surname']}"
+        if candidate_dict['PartyNm']:
+            display_name += f" ({candidate_dict['PartyNm']})"
 
         candidate_name_to_data[full_name] = {
             'party_abbreviation': party_abbreviation,
@@ -69,6 +74,7 @@ def read_senate_candidate_id_list(election_id):
             'state': candidate_dict['StateAb'],
             'given_name': candidate_dict['GivenNm'],
             'surname': candidate_dict['Surname'],
+            'display_name': display_name,
             'colour_data': '#' + colour_data[party_abbreviation]
         }
 
@@ -104,7 +110,7 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
     first_row = dop_data[0]
 
     for row in dop_data:
-        name = normalise_name(row['GivenNm'], row['Surname'])
+        name = normalise_name(row['GivenNm'], row['Surname'], state)
         rows_by_count[int(row['Count'])][name] = row
 
         if name not in all_normalised_names:
@@ -142,6 +148,29 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
         }
         all_count_data.append(this_count_data)
 
+    special_candidate_info = {
+        normalise_name('', 'Exhausted', state): {
+            'party_abbreviation': '',
+            'party_name': '',
+            'candidate_id': -1,
+            'state': state,
+            'given_name': "",
+            'surname': "Exhausted",
+            'display_name': 'Exhausted',
+            'colour_data': '#DDDDDD'
+        },
+        normalise_name('', 'Gain/Loss', state): {
+            'party_abbreviation': '',
+            'party_name': '',
+            'candidate_id': -2,
+            'state': state,
+            'given_name': "",
+            'surname': "Gain/Loss",
+            'display_name': 'Gain/Loss',
+            'colour_data': '#DDDDDD'
+        }
+    }
+
     return {
         'counts': all_count_data,
         'state': first_row['State'],
@@ -153,26 +182,7 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
             candidate_name: candidate_data
             for candidate_name, candidate_data in candidate_info.items()
             if candidate_data['state'] == state
-        } | {
-            '__Exhausted': {
-                'party_abbreviation': 'META',
-                'party_name': 'Internal',
-                'candidate_id': -1,
-                'state': state,
-                'given_name': "I'm",
-                'surname': "exhausted",
-                'colour_data': '#DDDDDD'
-            },
-            '__Gain/Loss': {
-                'party_abbreviation': 'META',
-                'party_name': 'Internal',
-                'candidate_id': -2,
-                'state': state,
-                'given_name': "Gain",
-                'surname': "Loss",
-                'colour_data': '#DDDDDD'
-            },
-        }
+        } | special_candidate_info
     }
 
 

@@ -50,7 +50,7 @@ function load_race_from_data(data) {
 
     state.data = {
         labels: data.names.map(
-            name => `${name} (${data.candidate_info[name].party_name})`
+            name => data.candidate_info[name].display_name
         ),
         datasets: [{
             label: "Votes",
@@ -124,7 +124,7 @@ window.addEventListener("keydown", e => {
         advance();
     } else if (e.key === 'ArrowLeft') {
         backwards();
-    } 
+    }
 });
 
-load_race('2022-federal-election', 'ACT');
+load_race('2022-federal-election', 'NSW');
