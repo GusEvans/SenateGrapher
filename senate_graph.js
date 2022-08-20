@@ -176,7 +176,7 @@ document.body.addEventListener("keydown", e => {
 function get_race_list() {
     // TODO: move this data into a JSON in data_out
     const ALL_STATES = ['ACT', 'NSW', 'NT', 'QLD', 'SA', 'TAS', 'VIC', 'WA'].sort();
-    const ELECTION_YEARS = [2022, 2019, 2016];
+    const ELECTION_YEARS = [2022, 2019, 2016, 2013, 2010, 2007, 2004];
     const all_races = [];
 
     ELECTION_YEARS.forEach(election_year => {

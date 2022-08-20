@@ -13,6 +13,10 @@ ELECTION_ID_TO_NAME = {
     '27966': '2022-federal-election',
     '24310': '2019-federal-election',
     '20499': '2016-federal-election',
+    '17496': '2013-federal-election',
+    '15508': '2010-federal-election',
+    '13745': '2007-federal-election',
+    '12246': '2004-federal-election',
 }
 
 STATES = ['ACT', 'NSW', 'NT', 'QLD', 'SA', 'TAS', 'VIC', 'WA']
@@ -41,6 +45,7 @@ def normalise_name(given_name, surname, state):
 
 
 def read_senate_candidate_id_list(election_id):
+    election_name = ELECTION_ID_TO_NAME[election_id]
     candidate_download_path = os.path.join(DATA_DIR, f'SenateCandidatesDownload-{election_id}.csv')
     csv_data = read_csv_file(candidate_download_path)
 
@@ -68,6 +73,10 @@ def read_senate_candidate_id_list(election_id):
 
         if candidate_dict['PartyNm']:
             tooltip_name += f" ({candidate_dict['PartyNm']})"
+
+        if party_abbreviation not in colour_data:
+            colour_data[party_abbreviation] = '888888'
+            print('Party', party_abbreviation, f'({candidate_dict["PartyNm"]})', 'not found for', election_name)
 
         candidate_name_to_data[full_name] = {
             'party_abbreviation': party_abbreviation,
