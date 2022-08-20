@@ -54,20 +54,22 @@ function load_race_from_data(data) {
         labels: data.names.map(
             name => data.candidate_info[name].display_name
         ),
-        datasets: [{
-            label: "Votes",
-            data: [],
-            backgroundColor: data.names.map(
-                name => data.candidate_info[name].colour_data
-            )
-        },
-        {
-            data: [0],
-            type: "line",
-            borderDash: [8, 8],
-            pointRadius: 0,
-            pointHitRadius: 0
-        }]
+        datasets: [
+            {
+                label: "Votes",
+                data: [],
+                backgroundColor: data.names.map(
+                    name => data.candidate_info[name].colour_data
+                )
+            },
+            {
+                data: new Array(data.names.length).fill(data.quota),
+                type: "line",
+                borderDash: [8, 8],
+                pointRadius: 0,
+                pointHitRadius: 0
+            }
+        ]
     };
 
     state.config = {
