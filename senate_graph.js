@@ -33,6 +33,10 @@ function get_scale_from_dropdown() {
     return document.getElementById('scale-linear').checked ? 'linear' : 'logarithmic';
 }
 
+function get_scale_min() {
+    return get_scale_from_dropdown() == 'logarithmic' ? 1 : 0;
+}
+
 function load_race_from_data(data) {
     console.log(data);
 
@@ -50,7 +54,7 @@ function load_race_from_data(data) {
         ),
         datasets: [{
             label: "Votes",
-            data: [85399, 3096, 48383, 13426, 2598, 6265, 4098, 90078, 16054],
+            data: [],
             backgroundColor: data.names.map(
                 name => data.candidate_info[name].colour_data
             )
@@ -79,7 +83,7 @@ function load_race_from_data(data) {
             },
             scales: {
                 y: {
-                    min: 0,
+                    min: get_scale_min(),
                     type: get_scale_from_dropdown()
                 }
             }
@@ -110,6 +114,7 @@ document.getElementById("backwards").addEventListener("click", backwards);
     document.getElementById(id_name).addEventListener('change', e => {
         console.log(e);
         state.config.options.scales.y.type = get_scale_from_dropdown();
+        state.config.options.scales.y.min = get_scale_min();
         load_data_for_count();
     });
 });
