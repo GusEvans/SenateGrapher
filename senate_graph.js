@@ -1,5 +1,7 @@
 'use strict';
 
+let js_loaded_data = {};
+
 let state = {
     current_data: null,
     current_count: null,
@@ -100,10 +102,30 @@ function load_race_from_data(data) {
     state.chart.update();
 }
 
+function got_js_payload_data(data) {
+    let key = `${data.election_name}-${data.state}`;
+    js_loaded_data[key] = data;
+    load_race_from_js(data.election_name, data.state);
+}
+
+function load_race_from_js(election_name, state) {
+    let key = `${election_name}-${state}`;
+    if (js_loaded_data[key]) {
+        load_race_from_data(js_loaded_data[key]);
+    } else {
+        const loader = document.createElement('script');
+        loader.src = `./data_out/${key}.js`;
+        document.body.appendChild(loader);
+    }
+}
+
 function load_race(election_name, state) {
     fetch(`./data_out/${election_name}-${state}.json`)
         .then(response => response.json())
-        .then(load_race_from_data);
+        .then(load_race_from_data)
+        .catch(
+            err => load_race_from_js(election_name, state)
+        );
 }
 
 
@@ -127,4 +149,4 @@ window.addEventListener("keydown", e => {
     }
 });
 
-load_race('2022-federal-election', 'NSW');
+load_race('2022-federal-election', 'ACT');

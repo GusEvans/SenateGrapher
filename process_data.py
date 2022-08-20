@@ -182,7 +182,8 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
             candidate_name: candidate_data
             for candidate_name, candidate_data in candidate_info.items()
             if candidate_data['state'] == state
-        } | special_candidate_info
+        } | special_candidate_info,
+        'election_name': election_name
     }
 
 
@@ -202,7 +203,17 @@ def process_election(election_id: str) -> None:
         dop_data = read_senate_race(election_id, state)
         compiled_info = compile_dop_data(election_id, state, dop_data, candidate_info)
         json_filename = os.path.join(DATA_OUT, f'{election_name}-{state}.json')
-        json.dump(compiled_info, open(json_filename, 'w'))
+        with open(json_filename, 'w') as json_file:
+            json.dump(compiled_info, json_file)
+
+        # CORS :(
+        js_filename = os.path.join(DATA_OUT, f'{election_name}-{state}.js')
+        js_contents = 'got_js_payload_data('
+        js_contents += json.dumps(compiled_info)
+        js_contents += ')'
+
+        with open(js_filename, 'w') as js_file:
+            js_file.write(js_contents)
 
 
 def main() -> None:
