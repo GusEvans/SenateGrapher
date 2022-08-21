@@ -1,436 +1,170 @@
 # 2022-federal-election-ACT
- 1) Katy Gallagher (Australian Labor Party)
- 2) David Pocock (David Pocock)
+The 2022 federal election was held on 21 May 2022. In the Australian Capital Territory, the elected candidates were Katy Gallagher (Australian Labor Party) and David Pocock (David Pocock).
 
 # 2022-federal-election-NSW
- 1) Marise Payne (Liberal)
- 2) Deborah O'Neill (Labor)
- 3) Ross Cadell (The Nationals)
- 4) Jenny McAllister (Labor)
- 5) David Shoebridge (The Greens)
- 6) Jim Molan (Liberal)
+The 2022 federal election was held on 21 May 2022. In New South Wales, the elected candidates were Marise Payne (Liberal), Deborah O'Neill (Labor), Ross Cadell (The Nationals), Jenny McAllister (Labor), David Shoebridge (The Greens), and Jim Molan (Liberal).
 
 # 2022-federal-election-NT
- 1) Malarndirri McCarthy (A.L.P.)
- 2) Jacinta Nampijinpa Price (NT CLP)
+The 2022 federal election was held on 21 May 2022. In the Northern Territory, the elected candidates were Malarndirri McCarthy (A.L.P.) and Jacinta Nampijinpa Price (NT CLP).
 
 # 2022-federal-election-QLD
- 1) James McGrath (Liberal National Party of Queensland)
- 2) Murray Watt (Australian Labor Party)
- 3) Matt Canavan (Liberal National Party of Queensland)
- 4) Penny Allman-Payne (Queensland Greens)
- 5) Pauline Hanson (Pauline Hanson's One Nation)
- 6) Anthony Chisholm (Australian Labor Party)
+The 2022 federal election was held on 21 May 2022. In Queensland, the elected candidates were James McGrath (Liberal National Party of Queensland), Murray Watt (Australian Labor Party), Matt Canavan (Liberal National Party of Queensland), Penny Allman-Payne (Queensland Greens), Pauline Hanson (Pauline Hanson's One Nation), and Anthony Chisholm (Australian Labor Party).
 
 # 2022-federal-election-SA
- 1) Simon Birmingham (Liberal)
- 2) Penny Wong (Australian Labor Party)
- 3) Andrew McLachlan (Liberal)
- 4) Don Farrell (Australian Labor Party)
- 5) Barbara Pocock (The Greens)
- 6) Kerrynne Liddle (Liberal)
+The 2022 federal election was held on 21 May 2022. In South Australia, the elected candidates were Simon Birmingham (Liberal), Penny Wong (Australian Labor Party), Andrew McLachlan (Liberal), Don Farrell (Australian Labor Party), Barbara Pocock (The Greens), and Kerrynne Liddle (Liberal).
 
 # 2022-federal-election-TAS
- 1) Jonno Duniam (Liberal)
- 2) Anne Urquhart (Australian Labor Party)
- 3) Peter Whish-Wilson (The Greens)
- 4) Helen Polley (Australian Labor Party)
- 5) Wendy Askew (Liberal)
- 6) Tammy Tyrrell (Jacqui Lambie Network)
+The 2022 federal election was held on 21 May 2022. In Tasmania, the elected candidates were Jonno Duniam (Liberal), Anne Urquhart (Australian Labor Party), Peter Whish-Wilson (The Greens), Helen Polley (Australian Labor Party), Wendy Askew (Liberal), and Tammy Tyrrell (Jacqui Lambie Network).
 
 # 2022-federal-election-VIC
- 1) Sarah Henderson (Liberal)
- 2) Linda White (Australian Labor Party)
- 3) Bridget McKenzie (The Nationals)
- 4) Jana Stewart (Australian Labor Party)
- 5) Lidia Thorpe (The Greens)
- 6) Ralph Babet (United Australia Party)
+The 2022 federal election was held on 21 May 2022. In Victoria, the elected candidates were Sarah Henderson (Liberal), Linda White (Australian Labor Party), Bridget McKenzie (The Nationals), Jana Stewart (Australian Labor Party), Lidia Thorpe (The Greens), and Ralph Babet (United Australia Party).
 
 # 2022-federal-election-WA
- 1) Sue Lines (Australian Labor Party)
- 2) Michaelia Cash (Liberal)
- 3) Glenn Sterle (Australian Labor Party)
- 4) Dean Smith (Liberal)
- 5) Dorinda Cox (The Greens (WA))
- 6) Fatima Payman (Australian Labor Party)
+The 2022 federal election was held on 21 May 2022. In Western Australia, the elected candidates were Sue Lines (Australian Labor Party), Michaelia Cash (Liberal), Glenn Sterle (Australian Labor Party), Dean Smith (Liberal), Dorinda Cox (The Greens (WA)), and Fatima Payman (Australian Labor Party).
 
 # 2019-federal-election-ACT
- 1) Katy Gallagher (Australian Labor Party)
- 2) Zed Seselja (Liberal)
+The 2019 federal election was held on 18 May 2019. In the Australian Capital Territory, the elected candidates were Katy Gallagher (Australian Labor Party) and Zed Seselja (Liberal).
 
 # 2019-federal-election-NSW
- 1) Hollie Hughes (Liberal)
- 2) Tony Sheldon (Labor)
- 3) Andrew Bragg (Liberal)
- 4) Tim Ayres (Labor)
- 5) Perin Davey (The Nationals)
- 6) Mehreen Faruqi (The Greens)
+The 2019 federal election was held on 18 May 2019. In New South Wales, the elected candidates were Hollie Hughes (Liberal), Tony Sheldon (Labor), Andrew Bragg (Liberal), Tim Ayres (Labor), Perin Davey (The Nationals), and Mehreen Faruqi (The Greens).
 
 # 2019-federal-election-NT
- 1) Malarndirri McCarthy (Australian Labor Party (Northern Territory) Branch)
- 2) Sam McMahon (Country Liberals (NT))
+The 2019 federal election was held on 18 May 2019. In the Northern Territory, the elected candidates were Malarndirri McCarthy (Australian Labor Party (Northern Territory) Branch) and Sam McMahon (Country Liberals (NT)).
 
 # 2019-federal-election-QLD
- 1) Paul Scarr (Liberal National Party of Queensland)
- 2) Nita Green (Australian Labor Party)
- 3) Susan McDonald (Liberal National Party of Queensland)
- 4) Malcolm Roberts (Pauline Hanson's One Nation)
- 5) Gerard Rennick (Liberal National Party of Queensland)
- 6) Larissa Waters (The Greens)
+The 2019 federal election was held on 18 May 2019. In Queensland, the elected candidates were Paul Scarr (Liberal National Party of Queensland), Nita Green (Australian Labor Party), Susan McDonald (Liberal National Party of Queensland), Malcolm Roberts (Pauline Hanson's One Nation), Gerard Rennick (Liberal National Party of Queensland), and Larissa Waters (The Greens).
 
 # 2019-federal-election-SA
- 1) Anne Ruston (Liberal)
- 2) Alex Gallacher (Australian Labor Party)
- 3) David Fawcett (Liberal)
- 4) Marielle Smith (Australian Labor Party)
- 5) Sarah Hanson-Young (The Greens)
- 6) Alex Antic (Liberal)
+The 2019 federal election was held on 18 May 2019. In South Australia, the elected candidates were Anne Ruston (Liberal), Alex Gallacher (Australian Labor Party), David Fawcett (Liberal), Marielle Smith (Australian Labor Party), Sarah Hanson-Young (The Greens), and Alex Antic (Liberal).
 
 # 2019-federal-election-TAS
- 1) Richard Colbeck (Liberal)
- 2) Carol Brown (Australian Labor Party)
- 3) Claire Chandler (Liberal)
- 4) Nick McKim (The Greens)
- 5) Catryna Bilyk (Australian Labor Party)
- 6) Jacqui Lambie (Jacqui Lambie Network)
+The 2019 federal election was held on 18 May 2019. In Tasmania, the elected candidates were Richard Colbeck (Liberal), Carol Brown (Australian Labor Party), Claire Chandler (Liberal), Nick McKim (The Greens), Catryna Bilyk (Australian Labor Party), and Jacqui Lambie (Jacqui Lambie Network).
 
 # 2019-federal-election-VIC
- 1) James Paterson (Liberal)
- 2) Raffaele Ciccone (Australian Labor Party)
- 3) Jane Hume (Liberal)
- 4) Jess Walsh (Australian Labor Party)
- 5) Janet Rice (The Greens (VIC))
- 6) David Van (Liberal)
+The 2019 federal election was held on 18 May 2019. In Victoria, the elected candidates were James Paterson (Liberal), Raffaele Ciccone (Australian Labor Party), Jane Hume (Liberal), Jess Walsh (Australian Labor Party), Janet Rice (The Greens (VIC)), and David Van (Liberal).
 
 # 2019-federal-election-WA
- 1) Linda Reynolds (Liberal)
- 2) Patrick Dodson (Australian Labor Party)
- 3) Slade Brockman (Liberal)
- 4) Matt O'Sullivan (Liberal)
- 5) Louise Pratt (Australian Labor Party)
- 6) Jordon Steele-John (The Greens (WA))
+The 2019 federal election was held on 18 May 2019. In Western Australia, the elected candidates were Linda Reynolds (Liberal), Patrick Dodson (Australian Labor Party), Slade Brockman (Liberal), Matt O'Sullivan (Liberal), Louise Pratt (Australian Labor Party), and Jordon Steele-John (The Greens (WA)).
 
 # 2016-federal-election-ACT
- 1) Katy Gallagher (Australian Labor Party)
- 2) Zed Seselja (Liberal)
+The 2016 federal election was held on 2 July 2016. In the Australian Capital Territory, the elected candidates were Katy Gallagher (Australian Labor Party) and Zed Seselja (Liberal).
 
 # 2016-federal-election-NSW
- 1) Marise Payne (Liberal)
- 2) Sam Dastyari (Labor)
- 3) Arthur Sinodinos (Liberal)
- 4) Jenny McAllister (Labor)
- 5) Fiona Nash (The Nationals)
- 6) Deborah O'Neill (Labor)
- 7) Concetta Fierravanti-Wells (Liberal)
- 8) Doug Cameron (Labor)
- 9) Lee Rhiannon (The Greens)
- 10) John Williams (The Nationals)
- 11) Brian Burston (Pauline Hanson's One Nation)
- 12) David Leyonhjelm (Liberal Democrats)
+The 2016 federal election was held on 2 July 2016. It was a double dissolution election, meaning 12 candidates were elected in each state instead of the usual 6. In New South Wales, the elected candidates were Marise Payne (Liberal), Sam Dastyari (Labor), Arthur Sinodinos (Liberal), Jenny McAllister (Labor), Fiona Nash (The Nationals), Deborah O'Neill (Labor), Concetta Fierravanti-Wells (Liberal), Doug Cameron (Labor), Lee Rhiannon (The Greens), John Williams (The Nationals), Brian Burston (Pauline Hanson's One Nation), and David Leyonhjelm (Liberal Democrats). The first 6 of these candidates were given 6-year terms, and the last 6 were given 3-year terms.
 
 # 2016-federal-election-NT
- 1) Malarndirri McCarthy (Australian Labor Party (Northern Territory) Branch)
- 2) Nigel Scullion (Country Liberals (NT))
+The 2016 federal election was held on 2 July 2016. In the Northern Territory, the elected candidates were Malarndirri McCarthy (Australian Labor Party (Northern Territory) Branch) and Nigel Scullion (Country Liberals (NT)).
 
 # 2016-federal-election-QLD
- 1) George Brandis (Liberal National Party of Queensland)
- 2) Murray Watt (Australian Labor Party)
- 3) Pauline Hanson (Pauline Hanson's One Nation)
- 4) Matthew Canavan (Liberal National Party of Queensland)
- 5) Anthony Chisholm (Australian Labor Party)
- 6) James McGrath (Liberal National Party of Queensland)
- 7) Claire Moore (Australian Labor Party)
- 8) Ian MacDonald (Liberal National Party of Queensland)
- 9) Larissa Waters (The Greens)
- 10) Barry O'Sullivan (Liberal National Party of Queensland)
- 11) Chris Ketter (Australian Labor Party)
- 12) Malcolm Roberts (Pauline Hanson's One Nation)
+The 2016 federal election was held on 2 July 2016. It was a double dissolution election, meaning 12 candidates were elected in each state instead of the usual 6. In Queensland, the elected candidates were George Brandis (Liberal National Party of Queensland), Murray Watt (Australian Labor Party), Pauline Hanson (Pauline Hanson's One Nation), Matthew Canavan (Liberal National Party of Queensland), Anthony Chisholm (Australian Labor Party), James McGrath (Liberal National Party of Queensland), Claire Moore (Australian Labor Party), Ian MacDonald (Liberal National Party of Queensland), Larissa Waters (The Greens), Barry O'Sullivan (Liberal National Party of Queensland), Chris Ketter (Australian Labor Party), and Malcolm Roberts (Pauline Hanson's One Nation). The first 6 of these candidates were given 6-year terms, and the last 6 were given 3-year terms.
 
 # 2016-federal-election-SA
- 1) Simon Birmingham (Liberal)
- 2) Penny Wong (Australian Labor Party)
- 3) Nick Xenophon (Nick Xenophon Team)
- 4) Cory Bernardi (Liberal)
- 5) Don Farrell (Australian Labor Party)
- 6) Stirling Griff (Nick Xenophon Team)
- 7) Anne Ruston (Liberal)
- 8) Alex Gallacher (Australian Labor Party)
- 9) David Fawcett (Liberal)
- 10) Skye Kakoschke-Moore (Nick Xenophon Team)
- 11) Sarah Hanson-Young (The Greens)
- 12) Bob Day (Family First)
+The 2016 federal election was held on 2 July 2016. It was a double dissolution election, meaning 12 candidates were elected in each state instead of the usual 6. In South Australia, the elected candidates were Simon Birmingham (Liberal), Penny Wong (Australian Labor Party), Nick Xenophon (Nick Xenophon Team), Cory Bernardi (Liberal), Don Farrell (Australian Labor Party), Stirling Griff (Nick Xenophon Team), Anne Ruston (Liberal), Alex Gallacher (Australian Labor Party), David Fawcett (Liberal), Skye Kakoschke-Moore (Nick Xenophon Team), Sarah Hanson-Young (The Greens), and Bob Day (Family First). The first 6 of these candidates were given 6-year terms, and the last 6 were given 3-year terms.
 
 # 2016-federal-election-TAS
- 1) Eric Abetz (Liberal)
- 2) Anne Urquhart (Australian Labor Party)
- 3) Peter Whish-Wilson (The Greens)
- 4) Jacqui Lambie (Jacqui Lambie Network)
- 5) Stephen Parry (Liberal)
- 6) Helen Polley (Australian Labor Party)
- 7) Jonathon Duniam (Liberal)
- 8) Carol Brown (Australian Labor Party)
- 9) David Bushby (Liberal)
- 10) Lisa Singh (Australian Labor Party)
- 11) Catryna Bilyk (Australian Labor Party)
- 12) Nick McKim (The Greens)
+The 2016 federal election was held on 2 July 2016. It was a double dissolution election, meaning 12 candidates were elected in each state instead of the usual 6. In Tasmania, the elected candidates were Eric Abetz (Liberal), Anne Urquhart (Australian Labor Party), Peter Whish-Wilson (The Greens), Jacqui Lambie (Jacqui Lambie Network), Stephen Parry (Liberal), Helen Polley (Australian Labor Party), Jonathon Duniam (Liberal), Carol Brown (Australian Labor Party), David Bushby (Liberal), Lisa Singh (Australian Labor Party), Catryna Bilyk (Australian Labor Party), and Nick McKim (The Greens). The first 6 of these candidates were given 6-year terms, and the last 6 were given 3-year terms.
 
 # 2016-federal-election-VIC
- 1) Mitch Fifield (Liberal)
- 2) Kim Carr (Australian Labor Party)
- 3) Richard Di Natale (The Greens)
- 4) Bridget McKenzie (The Nationals)
- 5) Stephen Michael Conroy (Australian Labor Party)
- 6) Scott Ryan (Liberal)
- 7) Jacinta Collins (Australian Labor Party)
- 8) James Paterson (Liberal)
- 9) Gavin Marshall (Australian Labor Party)
- 10) Derryn Hinch (Derryn Hinch's Justice Party)
- 11) Janet Rice (The Greens)
- 12) Jane Hume (Liberal)
+The 2016 federal election was held on 2 July 2016. It was a double dissolution election, meaning 12 candidates were elected in each state instead of the usual 6. In Victoria, the elected candidates were Mitch Fifield (Liberal), Kim Carr (Australian Labor Party), Richard Di Natale (The Greens), Bridget McKenzie (The Nationals), Stephen Michael Conroy (Australian Labor Party), Scott Ryan (Liberal), Jacinta Collins (Australian Labor Party), James Paterson (Liberal), Gavin Marshall (Australian Labor Party), Derryn Hinch (Derryn Hinch's Justice Party), Janet Rice (The Greens), and Jane Hume (Liberal). The first 6 of these candidates were given 6-year terms, and the last 6 were given 3-year terms.
 
 # 2016-federal-election-WA
- 1) Mathias Cormann (Liberal)
- 2) Sue Lines (Australian Labor Party)
- 3) Scott Ludlam (The Greens (WA))
- 4) Michaelia Cash (Liberal)
- 5) Glenn Sterle (Australian Labor Party)
- 6) Dean Smith (Liberal)
- 7) Patrick Dodson (Australian Labor Party)
- 8) Linda Reynolds (Liberal)
- 9) Chris Back (Liberal)
- 10) Louise Pratt (Australian Labor Party)
- 11) Rodney Norman Culleton (Pauline Hanson's One Nation)
- 12) Rachel Siewert (The Greens (WA))
+The 2016 federal election was held on 2 July 2016. It was a double dissolution election, meaning 12 candidates were elected in each state instead of the usual 6. In Western Australia, the elected candidates were Mathias Cormann (Liberal), Sue Lines (Australian Labor Party), Scott Ludlam (The Greens (WA)), Michaelia Cash (Liberal), Glenn Sterle (Australian Labor Party), Dean Smith (Liberal), Patrick Dodson (Australian Labor Party), Linda Reynolds (Liberal), Chris Back (Liberal), Louise Pratt (Australian Labor Party), Rodney Norman Culleton (Pauline Hanson's One Nation), and Rachel Siewert (The Greens (WA)). The first 6 of these candidates were given 6-year terms, and the last 6 were given 3-year terms.
 
 # 2014-special-election-WA
- 1) David Johnston (Liberal)
- 2) Joe Bullock (Australian Labor Party)
- 3) Scott Ludlam (The Greens (WA))
- 4) Michaelia Cash (Liberal)
- 5) Zhenya Wang (Palmer United Party)
- 6) Linda Reynolds (Liberal)
+A special Senate election in Western Australia was held on 5 April 2014, after the results of the 2013 election in that state were voided by the Court of Disputed Returns. The elected candidates were David Johnston (Liberal), Joe Bullock (Australian Labor Party), Scott Ludlam (The Greens (WA)), Michaelia Cash (Liberal), Zhenya Wang (Palmer United Party), and Linda Reynolds (Liberal).
 
 # 2013-federal-election-ACT
- 1) Kate Lundy (Australian Labor Party)
- 2) Zed Seselja (Liberal)
+The 2013 federal election was held on 7 September 2013. In the Australian Capital Territory, the elected candidates were Kate Lundy (Australian Labor Party) and Zed Seselja (Liberal).
 
 # 2013-federal-election-NSW
- 1) Marise Payne (Liberal)
- 2) Bob Carr (Labor)
- 3) John Williams (The Nationals)
- 4) Doug Cameron (Labor)
- 5) David Leyonhjelm (Liberal Democrats)
- 6) Arthur Sinodinos (Liberal)
+The 2013 federal election was held on 7 September 2013. In New South Wales, the elected candidates were Marise Payne (Liberal), Bob Carr (Labor), John Williams (The Nationals), Doug Cameron (Labor), David Leyonhjelm (Liberal Democrats), and Arthur Sinodinos (Liberal).
 
 # 2013-federal-election-NT
- 1) Nigel Scullion (Country Liberals (NT))
- 2) Nova Peris (Australian Labor Party (Northern Territory) Branch)
+The 2013 federal election was held on 7 September 2013. In the Northern Territory, the elected candidates were Nigel Scullion (Country Liberals (NT)) and Nova Peris (Australian Labor Party (Northern Territory) Branch).
 
 # 2013-federal-election-QLD
- 1) Ian MacDonald (Liberal National Party of Queensland)
- 2) Chris Ketter (Australian Labor Party)
- 3) James McGrath (Liberal National Party of Queensland)
- 4) Claire Moore (Australian Labor Party)
- 5) Glenn Patrick Lazarus (Palmer United Party)
- 6) Matthew Canavan (Liberal National Party of Queensland)
+The 2013 federal election was held on 7 September 2013. In Queensland, the elected candidates were Ian MacDonald (Liberal National Party of Queensland), Chris Ketter (Australian Labor Party), James McGrath (Liberal National Party of Queensland), Claire Moore (Australian Labor Party), Glenn Patrick Lazarus (Palmer United Party), and Matthew Canavan (Liberal National Party of Queensland).
 
 # 2013-federal-election-SA
- 1) Cory Bernardi (Liberal)
- 2) Nick Xenophon (Nick Xenophon Group)
- 3) Penny Wong (Australian Labor Party)
- 4) Sarah Hanson-Young (Australian Greens)
- 5) Bob Day (Family First)
- 6) Simon Birmingham (Liberal)
+The 2013 federal election was held on 7 September 2013. In South Australia, the elected candidates were Cory Bernardi (Liberal), Nick Xenophon (Nick Xenophon Group), Penny Wong (Australian Labor Party), Sarah Hanson-Young (Australian Greens), Bob Day (Family First), and Simon Birmingham (Liberal).
 
 # 2013-federal-election-TAS
- 1) Richard Colbeck (Liberal)
- 2) Carol Brown (Australian Labor Party)
- 3) David Bushby (Liberal)
- 4) Catryna Bilyk (Australian Labor Party)
- 5) Peter Whish-Wilson (Australian Greens)
- 6) Jacqui Lambie (Palmer United Party)
+The 2013 federal election was held on 7 September 2013. In Tasmania, the elected candidates were Richard Colbeck (Liberal), Carol Brown (Australian Labor Party), David Bushby (Liberal), Catryna Bilyk (Australian Labor Party), Peter Whish-Wilson (Australian Greens), and Jacqui Lambie (Palmer United Party).
 
 # 2013-federal-election-VIC
- 1) Mitch Fifield (Liberal)
- 2) Gavin Marshall (Australian Labor Party)
- 3) Scott Ryan (Liberal)
- 4) Jacinta Collins (Australian Labor Party)
- 5) Janet Rice (The Greens)
- 6) Ricky Muir (Australian Motoring Enthusiast Party)
+The 2013 federal election was held on 7 September 2013. In Victoria, the elected candidates were Mitch Fifield (Liberal), Gavin Marshall (Australian Labor Party), Scott Ryan (Liberal), Jacinta Collins (Australian Labor Party), Janet Rice (The Greens), and Ricky Muir (Australian Motoring Enthusiast Party). The election of Ricky Muir with just 17,083 primary votes led to the abolition of the group voting ticket system.
 
 # 2013-federal-election-WA
- 1) David Johnston (Liberal)
- 2) Joe Bullock (Australian Labor Party)
- 3) Michaelia Cash (Liberal)
- 4) Linda Reynolds (Liberal)
- 5) Wayne Dropulich (Australian Sports Party)
- 6) Scott Ludlam (The Greens (WA))
+The 2013 federal election was held on 7 September 2013. In Western Australia, the elected candidates were David Johnston (Liberal), Joe Bullock (Australian Labor Party), Michaelia Cash (Liberal), Linda Reynolds (Liberal), Wayne Dropulich (Australian Sports Party), and Scott Ludlam (The Greens (WA)). This election was declared void by the Court of Disputed Returns, because 1,375 ballot papers went missing during a recount, which was enough to change who the last 2 elected candidates were. As a result, a special election was held in 2014.
 
 # 2010-federal-election-ACT
- 1) Kate Alexandra Lundy (Australian Labor Party)
- 2) Gary Humphries (Liberal)
+The 2010 federal election was held on 21 August 2010. In the Australian Capital Territory, the elected candidates were Kate Alexandra Lundy (Australian Labor Party) and Gary Humphries (Liberal).
 
 # 2010-federal-election-NSW
- 1) Concetta Fierravanti-Wells (Liberal)
- 2) John Faulkner (Labor)
- 3) William Heffernan (Liberal)
- 4) Matthew Thistlethwaite (Labor)
- 5) Fiona Nash (The Nationals)
- 6) Lee Rhiannon (The Greens)
+The 2010 federal election was held on 21 August 2010. In New South Wales, the elected candidates were Concetta Fierravanti-Wells (Liberal), John Faulkner (Labor), William Heffernan (Liberal), Matthew Thistlethwaite (Labor), Fiona Nash (The Nationals), and Lee Rhiannon (The Greens).
 
 # 2010-federal-election-NT
- 1) Nigel Scullion (Country Liberals (NT))
- 2) Trish Crossin (Australian Labor Party (Northern Territory) Branch)
+The 2010 federal election was held on 21 August 2010. In the Northern Territory, the elected candidates were Nigel Scullion (Country Liberals (NT)) and Trish Crossin (Australian Labor Party (Northern Territory) Branch).
 
 # 2010-federal-election-QLD
- 1) George Henry Brandis (Liberal National Party of Queensland)
- 2) Joe Ludwig (Australian Labor Party)
- 3) Barnaby Joyce (Liberal National Party of Queensland)
- 4) Jan McLucas (Australian Labor Party)
- 5) Larissa Waters (The Greens)
- 6) Brett Mason (Liberal National Party of Queensland)
+The 2010 federal election was held on 21 August 2010. In Queensland, the elected candidates were George Henry Brandis (Liberal National Party of Queensland), Joe Ludwig (Australian Labor Party), Barnaby Joyce (Liberal National Party of Queensland), Jan McLucas (Australian Labor Party), Larissa Waters (The Greens), and Brett Mason (Liberal National Party of Queensland).
 
 # 2010-federal-election-SA
- 1) Alex Gallacher (Australian Labor Party)
- 2) Mary Jo Fisher (Liberal)
- 3) Anne McEwen (Australian Labor Party)
- 4) Sean Edwards (Liberal)
- 5) Penny Wright (The Greens)
- 6) David Fawcett (Liberal)
+The 2010 federal election was held on 21 August 2010. In South Australia, the elected candidates were Alex Gallacher (Australian Labor Party), Mary Jo Fisher (Liberal), Anne McEwen (Australian Labor Party), Sean Edwards (Liberal), Penny Wright (The Greens), and David Fawcett (Liberal).
 
 # 2010-federal-election-TAS
- 1) Helen Polley (Australian Labor Party)
- 2) Eric Abetz (Liberal)
- 3) Christine Milne (Australian Greens)
- 4) Anne Urquhart (Australian Labor Party)
- 5) Stephen Shane Parry (Liberal)
- 6) Lisa Singh (Australian Labor Party)
+The 2010 federal election was held on 21 August 2010. In Tasmania, the elected candidates were Helen Polley (Australian Labor Party), Eric Abetz (Liberal), Christine Milne (Australian Greens), Anne Urquhart (Australian Labor Party), Stephen Shane Parry (Liberal), and Lisa Singh (Australian Labor Party).
 
 # 2010-federal-election-VIC
- 1) Kim John Carr (Australian Labor Party)
- 2) Michael Ronaldson (Liberal)
- 3) Richard Di Natale (Australian Greens)
- 4) Stephen Michael Conroy (Australian Labor Party)
- 5) Bridget McKenzie (The Nationals)
- 6) John Madigan (Democratic Labor Party (DLP) of Australia)
+The 2010 federal election was held on 21 August 2010. In Victoria, the elected candidates were Kim John Carr (Australian Labor Party), Michael Ronaldson (Liberal), Richard Di Natale (Australian Greens), Stephen Michael Conroy (Australian Labor Party), Bridget McKenzie (The Nationals), and John Madigan (Democratic Labor Party (DLP) of Australia).
 
 # 2010-federal-election-WA
- 1) Mathias Cormann (Liberal)
- 2) Chris Evans (Australian Labor Party)
- 3) Chris Back (Liberal)
- 4) Glenn Sterle (Australian Labor Party)
- 5) Judith Adams (Liberal)
- 6) Rachel Siewert (The Greens)
+The 2010 federal election was held on 21 August 2010. In Western Australia, the elected candidates were Mathias Cormann (Liberal), Chris Evans (Australian Labor Party), Chris Back (Liberal), Glenn Sterle (Australian Labor Party), Judith Adams (Liberal), and Rachel Siewert (The Greens).
 
 # 2007-federal-election-ACT
- 1) Kate Lundy (Australian Labor Party)
- 2) Gary Humphries (Liberal)
+The 2007 federal election was held on 24 November 2007. In the Australian Capital Territory, the elected candidates were Kate Lundy (Australian Labor Party) and Gary Humphries (Liberal).
 
 # 2007-federal-election-NSW
- 1) Mark Arbib (Labor)
- 2) Helen Coonan (Liberal)
- 3) Doug Cameron (Labor)
- 4) John Williams (Nationals)
- 5) Marise Payne (Liberal)
- 6) Ursula Stephens (Labor)
+The 2007 federal election was held on 24 November 2007. In New South Wales, the elected candidates were Mark Arbib (Labor), Helen Coonan (Liberal), Doug Cameron (Labor), John Williams (Nationals), Marise Payne (Liberal), and Ursula Stephens (Labor).
 
 # 2007-federal-election-NT
- 1) Trish Crossin (Australian Labor Party (Northern Territory) Branch)
- 2) Nigel Scullion (Northern Territory Country Liberal Party)
+The 2007 federal election was held on 24 November 2007. In the Northern Territory, the elected candidates were Trish Crossin (Australian Labor Party (Northern Territory) Branch) and Nigel Scullion (Northern Territory Country Liberal Party).
 
 # 2007-federal-election-QLD
- 1) Ian Douglas MacDonald (Liberal)
- 2) John Joseph Hogg (Australian Labor Party)
- 3) Sue Boyce (Liberal)
- 4) Claire Moore (Australian Labor Party)
- 5) Ron Boswell (The Nationals)
- 6) Mark Furner (Australian Labor Party)
+The 2007 federal election was held on 24 November 2007. In Queensland, the elected candidates were Ian Douglas MacDonald (Liberal), John Joseph Hogg (Australian Labor Party), Sue Boyce (Liberal), Claire Moore (Australian Labor Party), Ron Boswell (The Nationals), and Mark Furner (Australian Labor Party).
 
 # 2007-federal-election-SA
- 1) Don Farrell (Australian Labor Party)
- 2) Cory Bernardi (Liberal)
- 3) Nick Xenophon ()
- 4) Penny Wong (Australian Labor Party)
- 5) Simon Birmingham (Liberal)
- 6) Sarah Hanson-Young (The Greens)
+The 2007 federal election was held on 24 November 2007. In South Australia, the elected candidates were Don Farrell (Australian Labor Party), Cory Bernardi (Liberal), Nick Xenophon (), Penny Wong (Australian Labor Party), Simon Birmingham (Liberal), and Sarah Hanson-Young (The Greens).
 
 # 2007-federal-election-TAS
- 1) Nick Sherry (Australian Labor Party)
- 2) Richard M Colbeck (Liberal)
- 3) Bob Brown (The Greens)
- 4) Carol Brown (Australian Labor Party)
- 5) David Bushby (Liberal)
- 6) Catryna Bilyk (Australian Labor Party)
+The 2007 federal election was held on 24 November 2007. In Tasmania, the elected candidates were Nick Sherry (Australian Labor Party), Richard M Colbeck (Liberal), Bob Brown (The Greens), Carol Brown (Australian Labor Party), David Bushby (Liberal), and Catryna Bilyk (Australian Labor Party).
 
 # 2007-federal-election-VIC
- 1) Jacinta Collins (Australian Labor Party)
- 2) Mitch Fifield (Liberal)
- 3) Gavin Marshall (Australian Labor Party)
- 4) Helen Kroger (Liberal)
- 5) Scott Ryan (Liberal)
- 6) David Feeney (Australian Labor Party)
+The 2007 federal election was held on 24 November 2007. In Victoria, the elected candidates were Jacinta Collins (Australian Labor Party), Mitch Fifield (Liberal), Gavin Marshall (Australian Labor Party), Helen Kroger (Liberal), Scott Ryan (Liberal), and David Feeney (Australian Labor Party).
 
 # 2007-federal-election-WA
- 1) David Johnston (Liberal)
- 2) Louise Pratt (Australian Labor Party)
- 3) Alan Eggleston (Liberal)
- 4) Mark Bishop (Australian Labor Party)
- 5) Michaelia Cash (Liberal)
- 6) Scott Ludlam (The Greens)
+The 2007 federal election was held on 24 November 2007. In Western Australia, the elected candidates were David Johnston (Liberal), Louise Pratt (Australian Labor Party), Alan Eggleston (Liberal), Mark Bishop (Australian Labor Party), Michaelia Cash (Liberal), and Scott Ludlam (The Greens).
 
 # 2004-federal-election-ACT
- 1) Kate Lundy (Australian Labor Party (ACT Branch))
- 2) Gary Humphries (Liberal Party of Australia - ACT Division)
+The 2004 federal election was held on 9 October 2004. In the Australian Capital Territory, the elected candidates were Kate Lundy (Australian Labor Party (ACT Branch)) and Gary Humphries (Liberal Party of Australia - ACT Division).
 
 # 2004-federal-election-NSW
- 1) Bill Heffernan (Liberal Party of Australia, NSW Division)
- 2) Steve Hutchins (Australian Labor Party (N.S.W. Branch))
- 3) Concetta Fierravanti-Wells (Liberal Party of Australia, NSW Division)
- 4) John Faulkner (Australian Labor Party (N.S.W. Branch))
- 5) Fiona Nash (National Party of Australia - N.S.W.)
- 6) Michael Forshaw (Australian Labor Party (N.S.W. Branch))
+The 2004 federal election was held on 9 October 2004. In New South Wales, the elected candidates were Bill Heffernan (Liberal Party of Australia, NSW Division), Steve Hutchins (Australian Labor Party (N.S.W. Branch)), Concetta Fierravanti-Wells (Liberal Party of Australia, NSW Division), John Faulkner (Australian Labor Party (N.S.W. Branch)), Fiona Nash (National Party of Australia - N.S.W.), and Michael Forshaw (Australian Labor Party (N.S.W. Branch)).
 
 # 2004-federal-election-NT
- 1) Nigel Scullion (Northern Territory Country Liberal Party)
- 2) Trish Crossin (Australian Labor Party (ALP))
+The 2004 federal election was held on 9 October 2004. In the Northern Territory, the elected candidates were Nigel Scullion (Northern Territory Country Liberal Party) and Trish Crossin (Australian Labor Party (ALP)).
 
 # 2004-federal-election-QLD
- 1) Brett Mason (Liberal Party of Australia - Queensland Division)
- 2) Jan McLucas (Australian Labor Party (State of Queensland))
- 3) George Henry Brandis (Liberal Party of Australia - Queensland Division)
- 4) Joe Ludwig (Australian Labor Party (State of Queensland))
- 5) Barnaby Joyce (National Party of Australia (Queensland))
- 6) Russell Trood (Liberal Party of Australia - Queensland Division)
+The 2004 federal election was held on 9 October 2004. In Queensland, the elected candidates were Brett Mason (Liberal Party of Australia - Queensland Division), Jan McLucas (Australian Labor Party (State of Queensland)), George Henry Brandis (Liberal Party of Australia - Queensland Division), Joe Ludwig (Australian Labor Party (State of Queensland)), Barnaby Joyce (National Party of Australia (Queensland)), and Russell Trood (Liberal Party of Australia - Queensland Division).
 
 # 2004-federal-election-SA
- 1) Nick Minchin (Liberal Party of Australia (S.A. Division))
- 2) Anne McEwen (Australian Labor Party (South Australian Branch))
- 3) Amanda Vanstone (Liberal Party of Australia (S.A. Division))
- 4) Annette Kay Hurley (Australian Labor Party (South Australian Branch))
- 5) Alan Ferguson (Liberal Party of Australia (S.A. Division))
- 6) Dana Wortley (Australian Labor Party (South Australian Branch))
+The 2004 federal election was held on 9 October 2004. In South Australia, the elected candidates were Nick Minchin (Liberal Party of Australia (S.A. Division)), Anne McEwen (Australian Labor Party (South Australian Branch)), Amanda Vanstone (Liberal Party of Australia (S.A. Division)), Annette Kay Hurley (Australian Labor Party (South Australian Branch)), Alan Ferguson (Liberal Party of Australia (S.A. Division)), and Dana Wortley (Australian Labor Party (South Australian Branch)).
 
 # 2004-federal-election-TAS
- 1) Eric Abetz (Liberal Party of Australia - Tasmanian Division)
- 2) Kerry O'Brien (Australian Labor Party (Tasmanian Branch))
- 3) Guy Barnett (Liberal Party of Australia - Tasmanian Division)
- 4) Helen Polley (Australian Labor Party (Tasmanian Branch))
- 5) Stephen Parry (Liberal Party of Australia - Tasmanian Division)
- 6) Christine Milne (Australian Greens)
+The 2004 federal election was held on 9 October 2004. In Tasmania, the elected candidates were Eric Abetz (Liberal Party of Australia - Tasmanian Division), Kerry O'Brien (Australian Labor Party (Tasmanian Branch)), Guy Barnett (Liberal Party of Australia - Tasmanian Division), Helen Polley (Australian Labor Party (Tasmanian Branch)), Stephen Parry (Liberal Party of Australia - Tasmanian Division), and Christine Milne (Australian Greens).
 
 # 2004-federal-election-VIC
- 1) Michael Ronaldson (Liberal Party of Australia (Victorian Division))
- 2) Kim John Carr (Australian Labor Party (Victorian Branch))
- 3) Julian McGauran (National Party of Australia - Victoria)
- 4) Stephen M Conroy (Australian Labor Party (Victorian Branch))
- 5) Judith Troeth (Liberal Party of Australia (Victorian Division))
- 6) Steve Fielding (Family First Party)
+The 2004 federal election was held on 9 October 2004. In Victoria, the elected candidates were Michael Ronaldson (Liberal Party of Australia (Victorian Division)), Kim John Carr (Australian Labor Party (Victorian Branch)), Julian McGauran (National Party of Australia - Victoria), Stephen M Conroy (Australian Labor Party (Victorian Branch)), Judith Troeth (Liberal Party of Australia (Victorian Division)), and Steve Fielding (Family First Party).
 
 # 2004-federal-election-WA
- 1) Chris Ellison (Liberal Party (W.A. Division) Inc.)
- 2) Chris Evans (Australian Labor Party (Western Australian Branch))
- 3) Ian Campbell (Liberal Party (W.A. Division) Inc.)
- 4) Glenn Sterle (Australian Labor Party (Western Australian Branch))
- 5) Judith Adams (Liberal Party (W.A. Division) Inc.)
- 6) Rachel Siewert (Australian Greens)
-
+The 2004 federal election was held on 9 October 2004. In Western Australia, the elected candidates were Chris Ellison (Liberal Party (W.A. Division) Inc.), Chris Evans (Australian Labor Party (Western Australian Branch)), Ian Campbell (Liberal Party (W.A. Division) Inc.), Glenn Sterle (Australian Labor Party (Western Australian Branch)), Judith Adams (Liberal Party (W.A. Division) Inc.), and Rachel Siewert (Australian Greens).
