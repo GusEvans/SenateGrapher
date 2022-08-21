@@ -4,7 +4,9 @@ import os
 import sys
 import typing as T
 import pprint
+import re
 import json
+
 
 DATA_DIR = os.path.abspath('data_in')
 DATA_OUT = os.path.abspath('data_out')
@@ -24,6 +26,8 @@ ELECTION_ID_TO_NAME = {
 
 STATES = ['ACT', 'NSW', 'NT', 'QLD', 'SA', 'TAS', 'VIC', 'WA']
 NEWLINE = '\r\n'
+
+ELECTED_LIST = os.path.join(os.path.abspath(DATA_OUT), 'elected.txt')
 
 
 def read_csv_file(csv_path, remove_first_line=True):
@@ -115,6 +119,16 @@ def read_senate_race(election_id: str, state: str) -> T.List[T.Dict[str, str]]:
         senate_reader = csv.DictReader(csv_file)
         return list(senate_reader)
 
+def titlecase_surname(surname):
+    surname = surname.title()
+
+    for prefix in ['Mc', 'Mac']:
+        surname = re.sub(
+            r'\b' + prefix + r'(\w)',
+            lambda match: prefix + match.group(1).title(),
+            surname
+        )
+    return surname
 
 def compile_dop_data(election_id, state, dop_data, candidate_info):
     rows_by_count = collections.defaultdict(dict)
@@ -178,7 +192,8 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
             'status': [
                 ['', 'Excluded', 'Elected'].index(rows_by_count[count][name]['Status'])
                 for name in all_normalised_names
-            ]
+            ],
+            'has_change': int(len(changed_rows) >= 1)
         }
         all_count_data.append(this_count_data)
 
@@ -216,6 +231,23 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
             'colour_data': '#DDDDDD'
         }
     }
+
+    # generate list of elected candidates in order
+    elected_rows = sorted([
+        (int(row['Order Elected']), row['GivenNm'], row['Surname'], normalised)
+        for normalised, row in rows_by_count[final_count_num].items()
+        if row['Order Elected'] and int(row['Order Elected'])
+    ])
+
+    with open(ELECTED_LIST, 'a') as elected_list:
+        print('#', election_name + '-' + state, file=elected_list)
+        for elected_num, given, surname, normalised in elected_rows:
+            party = candidate_info[normalised]['party_name']
+            print(
+                f' {elected_num}) {given} {titlecase_surname(surname)} ({party})',
+                file=elected_list
+            )
+        print(file=elected_list)
 
     return {
         'counts': all_count_data,
@@ -274,6 +306,8 @@ def clear_data_out():
     for filename in os.listdir(DATA_OUT):
         if filename.endswith('.json') or filename.endswith('js'):
             os.remove(os.path.join(DATA_OUT, filename))
+    with open(ELECTED_LIST, 'w') as elected_list:
+        pass
 
 if __name__ == '__main__':
     clear_data_out()
