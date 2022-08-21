@@ -9,10 +9,10 @@ let state = {
 };
 
 function load_data_for_count() {
-    state.data.datasets[0].data = state.current_data.counts[
-        state.current_count
-    ].progressive_vote_total;
-    state.config.options.plugins.title.text = `Count ${state.current_count + 1}`;
+    const data_for_count = state.current_data.counts[state.current_count];
+
+    state.data.datasets[0].data = data_for_count.progressive_vote_total;
+    state.config.options.plugins.title.text = `Count ${state.current_count + 1}: ${data_for_count.action.comment}`;
 
     state.chart.update();
 }
@@ -110,7 +110,15 @@ function load_race_from_data(data) {
                         major: {
                             enabled: true
                         },
-                        autoSkip: false
+                        autoSkip: false,
+                        color: (c) => {
+                            let status = data.counts[state.current_count].status[c.index];
+
+                            if (status == 1) {
+                                // excluded
+                                return '#aaa';
+                            }
+                        }
                     }
                 }
             }

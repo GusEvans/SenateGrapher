@@ -136,32 +136,64 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
     print(f'For {election_name} in {state} there were {final_count_num} counts and {len(all_normalised_names)} candidates')
 
     previous_action = {
-        # 'description': 'First preferences',
-        # 'candidate': None,
+        'comment': '[First preferences]'
     }
 
-    # print(all_normalised_names)
+    # last_elecection_exclusion = {
+    #     'candidate': '',
+    #     'type': ''
+    # }
 
     all_count_data = []
 
     for count in range(1, final_count_num + 1):
-        # changed_rows = [
-        #     row
-        #     for row in rows_by_count[count].values()
-        #     if row['Changed']
-        # ]
+        if 'Changed' in rows_by_count[count][all_normalised_names[0]]:
+            changed_key = 'Changed'
+        else:
+            changed_key = 'ChangedFl'
+
+        changed_rows = [
+            (name, row)
+            for name, row in rows_by_count[count].items()
+            if row[changed_key]
+        ]
+        # assert len(changed_rows) <= 1
+
+        # if changed_rows:
+        #     last_elecection_exclusion = {
+        #         'candidate': changed_rows[0][0],
+        #         'type': changed_rows[0][1]['Status']
+        #     }
 
         # print(count, changed_rows)
-        # assert len(changed_rows) == 1
 
         this_count_data = {
             'count': count,
             'progressive_vote_total': [
                 int(rows_by_count[count][name]['ProgressiveVoteTotal'])
                 for name in all_normalised_names
+            ],
+            'action': previous_action,
+            # 'last_change': last_elecection_exclusion
+            'status': [
+                ['', 'Excluded', 'Elected'].index(rows_by_count[count][name]['Status'])
+                for name in all_normalised_names
             ]
         }
         all_count_data.append(this_count_data)
+
+        # auto comment is not included on row of excluded/elected candidates
+        comment = None
+        comment_row = 0
+        while not comment and comment_row < len(all_normalised_names):
+            comment = rows_by_count[count][all_normalised_names[comment_row]]['Comment']
+            comment_row += 1
+        comment = comment or '[no AEC comment]'
+
+        previous_action = {
+            'comment': comment
+        }
+
 
     special_candidate_info = {
         normalise_name('', 'Exhausted', state): {
