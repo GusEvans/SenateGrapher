@@ -182,7 +182,6 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
         }
         all_count_data.append(this_count_data)
 
-        # auto comment is not included on row of excluded/elected candidates
         comment = None
         comment_row = 0
         while not comment and comment_row < len(all_normalised_names):
