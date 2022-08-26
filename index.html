@@ -7,11 +7,44 @@
         * {
             font-family:sans-serif;
         }
+        
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        
+        h1 {
+            color: #FFF;
+            padding: 10px;
+            margin: 0;
+        }
+        
+        #top-header {
+            background-color: #A03232;
+        }
+        
+        #settings {
+            background-color: #EAC492;
+        }
+        
+        #navigation {
+            padding: 10px;
+        }
+        
+        #settings-text {
+            color: #000;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px;
+            margin: 0;
+        }
 
         #scale-choice-wrapper {
             padding: 5px;
             border-radius: 20px;
             border: 1px solid black;
+            font-size: 0.8em;
+            font-weight: normal;
         }
 
         #chart-container {
@@ -20,42 +53,34 @@
         }
 
         #race-chooser {
-            margin-left: 10px;
-        }
-
-        #show-only-counts-with-changes-outer {
-            margin-left: 10px;
-            border: 1px solid black;
-            border-radius: 20px;
-            padding: 4px;
+            font-size: 0.8em;
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <h1>Senate Grapher</h1>
-    <p>This program graphs the distribution of preferences in Australian Senate elections. Select a state and election from the dropdown menu, and step through the process with the "Next Count" and "Previous Count" buttons. Switching between a linear and logarithmic scale on the y-axis may help to see the smaller changes in vote counts. More features are coming soon!</p>
-    <button type="button" id="backwards">Previous Count</button>
-    <button type="button" id="advance">Next Count</button>
-    <button type="button" id="jump_to_count">Jump to count:</button>
-    <input type="number" id="count_to_jump_to" value="1" min="1" max="9999">
-
-    <span id="scale-choice-wrapper">
-        <label>
-            Linear <input type="radio" id="scale-linear" name="scale-choice" value="linear" checked>
-        </label>
-        <label style="margin-left: 20px">
-            Logarithmic <input type="radio" id="scale-logarithmic" name="scale-choice" value="logarithmic">
-        </label>
-    </span>
-
-    <!-- <label id="show-only-counts-with-changes-outer">
-        Show only counts with elections/exclusions
-        <input type="checkbox">
-    </label> -->
-
-    <select id="race-chooser">
-    </select>
+    <div id="top-header">
+        <h1>SenateGrapher</h1>
+    </div>
+    <div id="settings">
+        <p id="settings-text">
+            Election: <select id="race-chooser"></select>
+            Settings: <span id="scale-choice-wrapper">
+                <label>
+                    Linear <input type="radio" id="scale-linear" name="scale-choice" value="linear" checked>
+                </label>
+                <label style="margin-left: 20px">
+                    Logarithmic <input type="radio" id="scale-logarithmic" name="scale-choice" value="logarithmic">
+                </label>
+            </span>
+        </p>        
+    </div>
+    <div id="navigation">
+        <button type="button" id="backwards">Previous Count</button>
+        <button type="button" id="advance">Next Count</button>
+        <button type="button" id="jump_to_count">Jump to count:</button>
+        <input type="number" id="count_to_jump_to" value="1" min="1" max="9999">
+    </div>
 
     <div id="chart-container">
         <canvas id="vote-chart"></canvas>
