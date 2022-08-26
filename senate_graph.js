@@ -31,6 +31,16 @@ function backwards() {
     }
 }
 
+function jump_to_count() {
+    if (document.getElementById('count_to_jump_to').value < state.current_data.counts.length && document.getElementById('count_to_jump_to').value - 1 >= 0) {
+        state.current_count = document.getElementById('count_to_jump_to').value - 1;
+        load_data_for_count();
+    } else {
+        state.current_count = state.current_data.counts.length - 1;
+        load_data_for_count();
+    }
+}
+
 function get_scale_from_dropdown() {
     return document.getElementById('scale-linear').checked ? 'linear' : 'logarithmic';
 }
@@ -163,6 +173,7 @@ function load_race(race_id) {
 
 document.getElementById("advance").addEventListener("click", advance);
 document.getElementById("backwards").addEventListener("click", backwards);
+document.getElementById("jump_to_count").addEventListener("click", jump_to_count);
 
 ['scale-linear', 'scale-logarithmic'].forEach(id_name => {
     document.getElementById(id_name).addEventListener('change', e => {
