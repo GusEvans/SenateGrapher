@@ -2,7 +2,7 @@
 
 ## About
 
-This program allows for the visualisation of the distribution of preferences in Australian Senate elections. It is currently in early development.
+This program allows for the visualisation of the distribution of preferences in Australian Senate elections. Not all planned features have been implemented, but the core functionality is all there.
 
 ## `process_data.py`
 

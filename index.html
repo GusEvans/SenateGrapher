@@ -14,30 +14,72 @@
             margin: 0;
         }
         
-        h1 {
+        a {
             color: #FFF;
-            padding: 10px;
-            margin: 0;
+            text-decoration: underline;
         }
         
-        #top-header {
+        .top-header {
             background-color: #A03232;
         }
         
-        #settings {
+        .settings {
             background-color: #EAC492;
         }
         
-        #navigation {
+        .navigation {
             padding: 10px;
         }
         
-        #settings-text {
+        .page-title {
+            color: #FFF;
+            padding: 10px;
+            margin: 0;
+            display: block;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        
+        .tooltip {
+            float: right;
+            display: inline-block;
+            position: relative;
+            padding: 16px;
+            margin: 0;
+            text-decoration: underline;
+            font-weight: bold;
+            font-size: 1.2em;
+            color: #FFF;
+        }
+        
+        .tooltip-text {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+            width: 500px;
+            background-color: rgba(160,50,50,0.8);
+            color: #FFF;
+            font-weight: normal;
+            border-radius: 0px 0px 10px 10px;
+            padding: 8px;
+            position: absolute;
+            z-index: 1;
+            top: 100%;
+            right: 10%;
+        }
+        
+        .tooltip:hover .tooltip-text {
+            visibility: visible;
+            opacity: 1;
+        }
+        
+        .settings-text {
             color: #000;
             font-size: 1.2em;
             font-weight: bold;
             padding: 10px;
             margin: 0;
+            display: block;
         }
 
         #scale-choice-wrapper {
@@ -47,24 +89,46 @@
             font-size: 0.8em;
             font-weight: normal;
         }
+        
+        #race-chooser {
+            font-size: 0.8em;
+        }
 
         #chart-container {
             padding-left: 20px;
             padding-right: 20px;
         }
-
-        #race-chooser {
-            font-size: 0.8em;
-        }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <div id="top-header">
-        <h1>SenateGrapher</h1>
+    <div class="top-header">
+        <span class="tooltip">Credits
+            <span class="tooltip-text">
+                <b>SenateGrapher credits</b>
+                <ul>
+                    <li><b>Code</b>: Written by Gus Evans and Xavier Cooney, and licensed under the <a href="https://github.com/GusEvans/SenateGrapher/blob/main/LICENSE">MIT License</a>.</li>
+                    <li><b>Graphing library</b>: <a href="https://www.chartjs.org">Chart.js</a>, licensed under the <a href="https://github.com/chartjs/Chart.js/blob/master/LICENSE.md">MIT License</a>.</li>
+                    <li><b>Election data</b>: From the <a href="https://www.aec.gov.au">Australian Electoral Commission</a>'s online <a href="https://results.aec.gov.au">Tally Room</a>, licensed under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0</a>.</li>
+                    <li><b>Party colours</b>: From the <a href="https://en.wikipedia.org/wiki/Template:Australian_politics/party_colours">English Wikipedia</a>, licensed under <a href="https://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution-ShareAlike 3.0</a>.</li>
+                </ul>
+                <a href="https://github.com/GusEvans/SenateGrapher">View the code online</a>
+            </span>
+        </span>
+        <span class="tooltip">How to use
+            <span class="tooltip-text">
+                <b>How to use SenateGrapher</b><br><br>
+                SenateGrapher is a program for graphing the distribution of preferences in Australian Senate elections.
+                Select an election from the dropdown menu, and step through the process with the "Next Count" and "Previous Count" buttons.<br><br>
+                On each count, votes are distributed between candidates based on voter preferences, either from candidates in last place being excluded, or as surplus votes from candidates who have successfully reached the quota (marked by the dotted line).<br><br>
+                Hover the mouse over a candidate's bar to see their party and how many votes they have.
+                You can switch between a linear and logarithmic scale to make some of the bars easier to see.
+            </span>
+        </span>
+        <span class="page-title">SenateGrapher</span>
     </div>
-    <div id="settings">
-        <p id="settings-text">
+    <div class="settings">
+        <span class="settings-text">
             Election: <select id="race-chooser"></select>
             Settings: <span id="scale-choice-wrapper">
                 <label>
@@ -74,9 +138,9 @@
                     Logarithmic <input type="radio" id="scale-logarithmic" name="scale-choice" value="logarithmic">
                 </label>
             </span>
-        </p>        
+        </span>        
     </div>
-    <div id="navigation">
+    <div class="navigation">
         <button type="button" id="backwards">Previous Count</button>
         <button type="button" id="advance">Next Count</button>
         <button type="button" id="jump_to_count">Jump to count:</button>
