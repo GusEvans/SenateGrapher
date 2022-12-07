@@ -28,6 +28,13 @@ function load_data_for_count() {
     state.old_count = data_for_count.progressive_vote_total;
 
     state.chart.update();
+
+    let at_end = state.current_count === state.current_data.counts.length - 1;
+    let at_beginning = state.current_count === 0;
+    document.getElementById("advance").disabled = at_end;
+    document.getElementById("advance_major").disabled = at_end;
+    document.getElementById("backwards").disabled = at_beginning;
+    document.getElementById("backwards_major").disabled = at_beginning;
 }
 
 function advance() {
