@@ -44,6 +44,26 @@ function backwards() {
     }
 }
 
+function advance_major() {
+    state.current_count += 1;
+
+    while (state.current_count + 1 < state.current_data.counts.length && !state.current_data.counts[state.current_count].has_change) {
+        state.current_count += 1;
+    }
+    state.current_count = Math.min(state.current_count, state.current_data.counts.length - 1);
+    load_data_for_count();
+}
+
+function backwards_major() {
+    state.current_count -= 1;
+
+    while (state.current_count > 0 && !state.current_data.counts[state.current_count].has_change) {
+        state.current_count -= 1;
+    }
+    state.current_count = Math.max(state.current_count, 0);
+    load_data_for_count();
+}
+
 function jump_to_count() {
     const input_value = parseInt(document.getElementById('count_to_jump_to').value);
     if (isNaN(input_value)) return;
@@ -209,6 +229,8 @@ function load_race(race_id) {
 
 document.getElementById("advance").addEventListener("click", advance);
 document.getElementById("backwards").addEventListener("click", backwards);
+document.getElementById("advance_major").addEventListener("click", advance_major);
+document.getElementById("backwards_major").addEventListener("click", backwards_major);
 document.getElementById("jump_to_count").addEventListener("click", jump_to_count);
 
 ['scale-linear', 'scale-logarithmic'].forEach(id_name => {
