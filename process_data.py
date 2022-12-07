@@ -27,7 +27,7 @@ ELECTION_ID_TO_NAME = {
 STATES = ['ACT', 'NSW', 'NT', 'QLD', 'SA', 'TAS', 'VIC', 'WA']
 NEWLINE = '\r\n'
 
-ELECTED_LIST = os.path.join(os.path.abspath(DATA_OUT), 'elected.txt')
+ELECTED_BLURB_PATH = os.path.join(os.path.abspath(DATA_DIR), 'blurbs.txt')
 
 
 def read_csv_file(csv_path, remove_first_line=True):
@@ -49,6 +49,18 @@ def normalise_name(given_name, surname, state):
         return f'__{state}_{surname}'
 
     return f'{surname}, {given_name} ({state})'
+
+def read_blurb_data():
+    with open(ELECTED_BLURB_PATH) as blurb_file:
+        file_contents = blurb_file.read()
+        entries = file_contents.strip().split('\n\n')
+        return {
+            header_election_id.replace('# ', ''): blurb_text
+            for (header_election_id, blurb_text) in [entry.split('\n') for entry in entries]
+        }
+
+blurb_data = read_blurb_data()
+print(blurb_data)
 
 
 def read_senate_candidate_id_list(election_id):
@@ -239,16 +251,6 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
         if row['Order Elected'] and int(row['Order Elected'])
     ])
 
-    with open(ELECTED_LIST, 'a') as elected_list:
-        print('#', election_name + '-' + state, file=elected_list)
-        for elected_num, given, surname, normalised in elected_rows:
-            party = candidate_info[normalised]['party_name']
-            print(
-                f' {elected_num}) {given} {titlecase_surname(surname)} ({party})',
-                file=elected_list
-            )
-        print(file=elected_list)
-
     return {
         'counts': all_count_data,
         'state': first_row['State'],
@@ -261,7 +263,8 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
             for candidate_name, candidate_data in candidate_info.items()
             if candidate_data['state'] == state
         } | special_candidate_info,
-        'election_name': election_name
+        'election_name': election_name,
+        'blurb_text': blurb_data[election_name + '-' + first_row['State'].strip()]
     }
 
 
@@ -306,8 +309,6 @@ def clear_data_out():
     for filename in os.listdir(DATA_OUT):
         if filename.endswith('.json') or filename.endswith('js'):
             os.remove(os.path.join(DATA_OUT, filename))
-    with open(ELECTED_LIST, 'w') as elected_list:
-        pass
 
 if __name__ == '__main__':
     clear_data_out()

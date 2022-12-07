@@ -8,29 +8,29 @@
         * {
             font-family:sans-serif;
         }
-        
+
         body {
             padding: 0;
             margin: 0;
         }
-        
+
         a {
             color: #FFF;
             text-decoration: underline;
         }
-        
+
         .top-header {
             background-color: #A03232;
         }
-        
+
         .settings {
             background-color: #EAC492;
         }
-        
+
         .navigation {
             padding: 10px;
         }
-        
+
         .page-title {
             color: #FFF;
             padding: 10px;
@@ -39,7 +39,7 @@
             font-size: 2em;
             font-weight: bold;
         }
-        
+
         .tooltip {
             float: right;
             display: inline-block;
@@ -51,7 +51,7 @@
             font-size: 1.2em;
             color: #FFF;
         }
-        
+
         .tooltip-text {
             visibility: hidden;
             opacity: 0;
@@ -67,12 +67,12 @@
             top: 100%;
             right: 10%;
         }
-        
+
         .tooltip:hover .tooltip-text {
             visibility: visible;
             opacity: 1;
         }
-        
+
         .settings-text {
             color: #000;
             font-size: 1.2em;
@@ -89,7 +89,7 @@
             font-size: 0.8em;
             font-weight: normal;
         }
-        
+
         #race-chooser {
             font-size: 0.8em;
         }
@@ -97,6 +97,17 @@
         #chart-container {
             padding-left: 20px;
             padding-right: 20px;
+        }
+
+        #election-blurb {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 5px;
+            padding-bottom: 0px;
+        }
+
+        #count_to_jump_to {
+            width: 5em;
         }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
@@ -138,15 +149,15 @@
                     Logarithmic <input type="radio" id="scale-logarithmic" name="scale-choice" value="logarithmic">
                 </label>
             </span>
-        </span>        
+        </span>
     </div>
+    <div id="election-blurb"></div>
     <div class="navigation">
         <button type="button" id="backwards">Previous Count</button>
         <button type="button" id="advance">Next Count</button>
         <button type="button" id="jump_to_count">Jump to count:</button>
         <input type="number" id="count_to_jump_to" value="1" min="1" max="9999">
     </div>
-
     <div id="chart-container">
         <canvas id="vote-chart"></canvas>
     </div>

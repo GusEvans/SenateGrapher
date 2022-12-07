@@ -32,13 +32,12 @@ function backwards() {
 }
 
 function jump_to_count() {
-    if (document.getElementById('count_to_jump_to').value < state.current_data.counts.length && document.getElementById('count_to_jump_to').value - 1 >= 0) {
-        state.current_count = document.getElementById('count_to_jump_to').value - 1;
-        load_data_for_count();
-    } else {
-        state.current_count = state.current_data.counts.length - 1;
-        load_data_for_count();
-    }
+    const input_value = parseInt(document.getElementById('count_to_jump_to').value);
+    if (isNaN(input_value)) return;
+
+    state.current_count = Math.max(0, Math.min(input_value, state.current_data.counts.length - 1))
+
+    load_data_for_count();
 }
 
 function get_scale_from_dropdown() {
@@ -57,6 +56,8 @@ function load_race_from_data(data) {
     if (location.href.indexOf('git') == -1) {
         console.log(data);
     }
+
+    document.getElementById('election-blurb').innerText = data.blurb_text;
 
     state.current_data = data;
     state.current_count = 0;
