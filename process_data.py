@@ -85,7 +85,7 @@ def read_senate_candidate_id_list(election_id):
         if party_abbreviation == '':
             party_abbreviation = 'IND'
 
-        display_name = f"{candidate_dict['GivenNm']} {candidate_dict['Surname']}"
+        display_name = f"{candidate_dict['GivenNm']} {titlecase_surname(candidate_dict['Surname'])}"
         tooltip_name = display_name
 
         if candidate_dict['PartyNm']:
@@ -160,7 +160,7 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
     print(f'For {election_name} in {state} there were {final_count_num} counts and {len(all_normalised_names)} candidates')
 
     previous_action = {
-        'comment': '[First preferences]'
+        'comment': 'First preferences.'
     }
 
     # last_elecection_exclusion = {
@@ -169,6 +169,8 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
     # }
 
     all_count_data = []
+
+    changed_names = None
 
     for count in range(1, final_count_num + 1):
         if 'Changed' in rows_by_count[count][all_normalised_names[0]]:
@@ -179,9 +181,11 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
         changed_rows = [
             (name, row)
             for name, row in rows_by_count[count].items()
-            if row[changed_key]
+            if row[changed_key].strip()
         ]
-        # assert len(changed_rows) <= 1
+        if changed_rows:
+            changed_names = [(row[0], row[1]) for row in changed_rows]
+        # assert len(changed_rows) <= 1, f'{count} {election_name}'
 
         # if changed_rows:
         #     last_elecection_exclusion = {
@@ -191,13 +195,19 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
 
         # print(count, changed_rows)
 
+        this_comment = previous_action['comment']
+        if count == final_count_num:
+            this_comment = this_comment + ' All vacancies filled.'
+            this_comment = this_comment.strip()
         this_count_data = {
             'count': count,
             'progressive_vote_total': [
                 int(rows_by_count[count][name]['ProgressiveVoteTotal'])
                 for name in all_normalised_names
             ],
-            'action': previous_action,
+            'action': {
+                'comment': this_comment
+            },
             # 'last_change': last_elecection_exclusion
             'status': [
                 ['', 'Excluded', 'Elected'].index(rows_by_count[count][name]['Status'])
@@ -212,7 +222,39 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
         while not comment and comment_row < len(all_normalised_names):
             comment = rows_by_count[count][all_normalised_names[comment_row]]['Comment']
             comment_row += 1
-        comment = comment or '[no AEC comment]'
+        if not comment:
+            print(f'No comment on {count=} {election_name=} {state=}')
+            comment = ''
+
+        if match := re.search(r'Preferences with a transfer value of ([0-9]+[.]?[0-9]*) will be distributed in count', comment):
+            assert changed_names
+            all_names = [
+                candidate_info[changed_name[0]]['display_name']
+                for changed_name in changed_names
+            ]
+            if len(all_names) == 2:
+                excluded_names = f'{all_names[0]} and {all_names[1]}'
+            elif len(all_names) > 2:
+                excluded_names = ', '.join(all_names[:-1]) + ', and ' + all_names[-1]
+            else:
+                excluded_names = all_names[0]
+            transfer_value = float(match.group(1))
+            was_were = 'were' if len(changed_names) > 1 else 'was'
+            if transfer_value == 1:
+                comment = f'{excluded_names} {was_were} excluded and preferences were distributed at full value.'
+            else:
+                comment = f'{excluded_names} {was_were} excluded and preferences were distributed at a transfer value of {transfer_value:.4f}.'
+            if len(changed_names) > 1: comment = 'Bulk exclusion: ' + comment
+        elif match := re.search(r'has [0-9]* surplus vote\(s\) to be distributed in count # [0-9]+ at a transfer value of ([0-9]+[.]?[0-9]*).', comment):
+            for future_name, future_row in rows_by_count[count + 1].items():
+                if int(future_row['Papers']) < 0:
+                    elected_name = future_name
+                    break
+            else:
+                raise Exception('no negative papers???')
+            elected_display_name = candidate_info[elected_name]['display_name']
+            transfer_value = float(match.group(1))
+            comment = f'{elected_display_name} was elected and surplus votes were distributed at transfer value {transfer_value:.3f}'
 
         previous_action = {
             'comment': comment

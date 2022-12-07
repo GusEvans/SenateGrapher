@@ -48,7 +48,7 @@ function jump_to_count() {
     const input_value = parseInt(document.getElementById('count_to_jump_to').value);
     if (isNaN(input_value)) return;
 
-    state.current_count = Math.max(0, Math.min(input_value, state.current_data.counts.length - 1))
+    state.current_count = Math.max(0, Math.min(input_value - 1, state.current_data.counts.length - 1))
 
     load_data_for_count();
 }
