@@ -5,14 +5,27 @@ let js_loaded_data = {};
 let state = {
     current_data: null,
     current_count: null,
-    char: null
+    count_change: null,
+    old_count: null,
+    chart: null
 };
 
 function load_data_for_count() {
     const data_for_count = state.current_data.counts[state.current_count];
 
+    if (state.old_count === null) {
+        state.old_count = Array(state.current_data.names.length).fill(0);
+    }
+
+    state.count_change = state.old_count.map((old_count, i) => {
+        return data_for_count.progressive_vote_total[i] - old_count;
+    });
+    console.log(state.count_change);
+
     state.data.datasets[0].data = data_for_count.progressive_vote_total;
     state.config.options.plugins.title.text = `Count ${state.current_count + 1}: ${data_for_count.action.comment}`;
+
+    state.old_count = data_for_count.progressive_vote_total;
 
     state.chart.update();
 }
@@ -61,6 +74,7 @@ function load_race_from_data(data) {
 
     state.current_data = data;
     state.current_count = 0;
+    state.old_count = null;
 
     state.data = {
         labels: data.names.map(
@@ -72,14 +86,34 @@ function load_race_from_data(data) {
                 data: [],
                 backgroundColor: data.names.map(
                     name => data.candidate_info[name].colour_data
-                )
+                ),
+                datalabels: {
+                    color: data.names.map(
+                        name => data.candidate_info[name].colour_data
+                    ),
+                    anchor: 'end',
+                    align: 'end',
+                    offset: -5,
+                    formatter: function(value, context) {
+                        let change = `${state.count_change[context.dataIndex]}`;
+                        if (change === '0') {
+                            change = ''
+                        } else if (change[0] !== '-') {
+                            change = `+${change}`;
+                        }
+                        return change;
+                    }
+                },
             },
             {
                 data: new Array(data.names.length).fill(data.quota),
                 type: "line",
                 borderDash: [8, 8],
                 pointRadius: 0,
-                pointHitRadius: 0
+                pointHitRadius: 0,
+                datalabels: {
+                    display: false
+                }
             }
         ]
     };
@@ -89,6 +123,7 @@ function load_race_from_data(data) {
     state.config = {
         type: "bar",
         data: state.data,
+        plugins: [ChartDataLabels],
         options: {
             plugins: {
                 legend: {

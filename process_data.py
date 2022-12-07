@@ -60,8 +60,6 @@ def read_blurb_data():
         }
 
 blurb_data = read_blurb_data()
-print(blurb_data)
-
 
 def read_senate_candidate_id_list(election_id):
     election_name = ELECTION_ID_TO_NAME[election_id]
