@@ -172,7 +172,6 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
 
     changed_names = None
     excluded_rows = None
-    prev_was_change = True
 
     for count in range(1, final_count_num + 1):
         if 'Changed' in rows_by_count[count][all_normalised_names[0]]:
@@ -222,11 +221,9 @@ def compile_dop_data(election_id, state, dop_data, candidate_info):
                 ['', 'Excluded', 'Elected'].index(rows_by_count[count][name]['Status'])
                 for name in all_normalised_names
             ],
-            'has_change': int(prev_was_change)
+            'has_change': int(len(changed_rows) >= 1)
         }
         all_count_data.append(this_count_data)
-
-        prev_was_change = len(changed_rows) >= 1
 
         comment = None
         comment_row = 0
